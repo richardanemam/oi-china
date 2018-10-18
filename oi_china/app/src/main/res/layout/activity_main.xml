@@ -1,81 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/main_content"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
-    android:fitsSystemWindows="true">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary">
 
-    <android.support.design.widget.AppBarLayout
-        android:id="@+id/appbar"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/detail_backdrop_height"
-        android:fitsSystemWindows="true"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        android:layout_height="150dp"
+        android:layout_marginBottom="8dp"
+        android:background="?attr/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <android.support.design.widget.CollapsingToolbarLayout
-            android:id="@+id/collapsing_toolbar"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fitsSystemWindows="true"
-            app:contentScrim="?attr/colorPrimary"
-            app:expandedTitleMarginEnd="64dp"
-            app:expandedTitleMarginStart="48dp"
-            app:expandedTitleTextAppearance="@android:color/transparent"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed">
-
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:id="@+id/backdrop"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:fitsSystemWindows="true"
-                    android:scaleType="centerCrop"
-                    app:layout_collapseMode="parallax" />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="42dp"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/oi_china"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/backdrop_title"
-                        android:textColor="@android:color/white"
-                        android:textSize="@dimen/backdrop_title" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/backdrop_subtitle"
-                        android:textColor="@android:color/white"
-                        android:textSize="@dimen/backdrop_subtitle" />
-
-                </LinearLayout>
-            </RelativeLayout>
-
-            <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/title"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/toolbar_dimen"
-                app:layout_collapseMode="pin"
-                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textColor="@color/splash_screen_logo"
+                android:textSize="@dimen/toolbar_text_size" />
 
-        </android.support.design.widget.CollapsingToolbarLayout>
+            <TextView
+                android:id="@+id/slogan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_below="@id/title"
+                android:text="@string/slogan"
+                android:textColor="@color/splash_screen_logo"
+                android:textSize="@dimen/toolbar_slogan_size" />
 
-    </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_main" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
 
-</android.support.design.widget.CoordinatorLayout>
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/button_licoes"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_background"
+            android:layout_marginBottom="5dp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/licoes"
+            android:textAlignment="textStart"
+            android:textColor="@color/splash_screen_logo"
+            android:drawableLeft="@drawable/lesson_button"
+            android:drawablePadding="80dp"
+            android:padding="23dp"
+            tools:ignore="RtlCompat"
+            android:onClick="licoes"/>
+
+        <Button
+            android:id="@+id/button_exercicios"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button_licoes"
+            android:layout_marginBottom="5dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button_background"
+            android:text="@string/exercicios"
+            android:textColor="@color/splash_screen_logo"
+            android:drawableLeft="@drawable/exercises_button"
+            android:drawablePadding="-10dp"
+            android:padding="23dp"/>
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button_exercicios"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button_background"
+            android:text="@string/caracteres"
+            android:textColor="@color/splash_screen_logo"
+            android:drawableLeft="@drawable/characters_button"
+            android:padding="23dp"/>
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
