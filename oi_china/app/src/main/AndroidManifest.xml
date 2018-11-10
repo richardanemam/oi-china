@@ -10,7 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".SplashScreen" android:theme="@style/SplashScreenTheme">
+        <activity
+            android:name=".Activity.SplashScreenActivity"
+            android:theme="@style/SplashScreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,8 +20,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".MainActivity"/>
-        <activity android:name=".Lessons"/>
+        <activity android:name=".Activity.MainActivity" />
+        <activity android:name=".Activity.LessonsActivity" />
 
     </application>
 
