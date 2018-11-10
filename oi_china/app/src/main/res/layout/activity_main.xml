@@ -53,7 +53,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
-            android:id="@+id/button_licoes"
+            android:id="@+id/btn_licoes"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:background="@drawable/button_background"
@@ -65,14 +65,13 @@
             android:drawableLeft="@drawable/lesson_button"
             android:drawablePadding="80dp"
             android:padding="23dp"
-            tools:ignore="RtlCompat"
-            android:onClick="licoes"/>
+            tools:ignore="RtlCompat" />
 
         <Button
             android:id="@+id/button_exercicios"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/button_licoes"
+            android:layout_below="@id/btn_licoes"
             android:layout_marginBottom="5dp"
             android:layout_centerHorizontal="true"
             android:background="@drawable/button_background"
