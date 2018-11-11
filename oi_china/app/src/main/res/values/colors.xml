@@ -14,4 +14,11 @@
     <!--BLACK-->
     <color name="black_000000">#000000</color>
 
+    <!--GREY-->
+    <color name="grey_d3d3d3">#d3d3d3</color>
+    <color name="grey_a9a9a9">#a9a9a9</color>
+    <color name="grey_949494">#949494</color>
+    <color name="grey_808080">#808080</color>
+
+
 </resources>
