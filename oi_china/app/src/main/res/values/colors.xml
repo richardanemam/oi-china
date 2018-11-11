@@ -6,9 +6,12 @@
     <color name="colorPrimaryDark">#b366ff</color>
     <color name="colorAccent">#FF4081</color>
     <color name="view_background">#f1f5f8</color>
-    <color name="splash_screen_logo">#8c1aff</color>
+    <color name="logo_color">#8c1aff</color>
 
     <!--BLUE-->
     <color name="blue_0000FF">#0000FF</color>
+
+    <!--BLACK-->
+    <color name="black_000000">#000000</color>
 
 </resources>

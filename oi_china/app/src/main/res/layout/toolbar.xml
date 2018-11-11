@@ -18,7 +18,7 @@
             android:id="@+id/colapsing_toolbar"
             android:layout_height="match_parent"
             android:layout_width="match_parent"
-            android:background="@color/splash_screen_logo"
+            android:background="@color/logo_color"
             app:layout_scrollFlags="exitUntilCollapsed|scroll"
             app:contentScrim="?attr/colorPrimary"
             app:expandedTitleMarginStart="48dp"

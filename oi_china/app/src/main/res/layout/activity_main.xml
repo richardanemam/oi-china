@@ -24,7 +24,6 @@
             <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:minHeight="0dp"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="82dp">
 
@@ -35,7 +34,7 @@
                     android:gravity="center"
                     android:importantForAccessibility="no"
                     android:text="@string/app_name"
-                    android:textColor="@color/splash_screen_logo"
+                    android:textColor="@color/logo_color"
                     android:textSize="@dimen/app_name_size"
                     app:layout_constraintBottom_toTopOf="@id/tv_slogan"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -49,13 +48,12 @@
                     android:gravity="center"
                     android:importantForAccessibility="no"
                     android:text="@string/slogan"
-                    android:textColor="@color/splash_screen_logo"
+                    android:textColor="@color/logo_color"
                     android:textSize="@dimen/slogan_size"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@id/tv_puhan"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="@id/tv_puhan"
                     app:layout_constraintTop_toBottomOf="@id/tv_puhan" />
-
 
             </android.support.constraint.ConstraintLayout>
         </android.support.v7.widget.Toolbar>
@@ -69,7 +67,7 @@
             android:drawableLeft="@drawable/lesson_button"
             android:padding="24dp"
             android:text="@string/licoes"
-            android:textColor="@color/splash_screen_logo"
+            android:textColor="@color/logo_color"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/toolbar_id" />
@@ -84,7 +82,7 @@
             android:drawableLeft="@drawable/characters_button"
             android:padding="24dp"
             android:text="@string/expressoes"
-            android:textColor="@color/splash_screen_logo"
+            android:textColor="@color/logo_color"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/btn_licoes" />
@@ -97,7 +95,7 @@
             android:background="@null"
             android:text="@string/sobre"
             android:textAllCaps="false"
-            android:textColor="@color/blue_0000FF"
+            android:textColor="@color/black_000000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/btn_expressoes" />

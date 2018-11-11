@@ -24,8 +24,8 @@
         </activity>
 
         <activity android:name=".activity.MainActivity" />
-        <activity android:name=".activity.LessonsActivity" />
-
+        <activity
+            android:name=".activity.LessonsActivity"
+            android:parentActivityName=".activity.MainActivity" />
     </application>
-
 </manifest>
