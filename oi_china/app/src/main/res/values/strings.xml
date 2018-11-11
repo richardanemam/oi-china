@@ -1,12 +1,12 @@
 <resources>
 
+    <!--Standard Strings-->
     <string name="app_name">PUHAN 葡汉</string>
-    <string name="action_settings">Settings</string>
-    <string name="backdrop_subtitle">学习中文的简单方法</string>
     <string name="slogan">APRENDA MANDARIM</string>
-    <string name="licoes">Lições</string>
-    <string name="exercicios">Exercícios</string>
-    <string name="caracteres">Caracteres</string>
 
+    <!--Main Activity-->
+    <string name="licoes">Lições</string>
+    <string name="expressoes">Expressões</string>
+    <string name="sobre">sobre o app</string>
 
 </resources>

@@ -1,4 +1,4 @@
-package com.example.richard.oichina.Adapter
+package com.example.richard.oichina.adapter
 
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager

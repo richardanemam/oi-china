@@ -1,4 +1,4 @@
-package com.example.richard.oichina.Activity
+package com.example.richard.oichina.activity
 
 import android.content.Intent
 import android.os.Bundle
