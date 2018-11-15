@@ -26,9 +26,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:tabGravity="fill"
-            app:tabIndicatorColor="@color/colorAccent"
+            app:tabIndicatorColor="@color/blue_67AECA"
+            app:tabSelectedTextColor="@color/blue_67AECA"
             app:tabMode="fixed"
-            app:tabSelectedTextColor="@color/colorAccent"
             app:tabTextColor="@color/grey_808080" />
 
     </android.support.design.widget.AppBarLayout>
