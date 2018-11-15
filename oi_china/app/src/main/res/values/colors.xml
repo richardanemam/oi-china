@@ -2,8 +2,8 @@
 <resources>
 
     <!--Standard Colors-->
-    <color name="colorPrimary"> #f7f7f7</color>
-    <color name="colorPrimaryDark">#b366ff</color>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#808080</color>
     <color name="colorAccent">#FF4081</color>
     <color name="view_background">#f1f5f8</color>
     <color name="logo_color">#8c1aff</color>
@@ -19,6 +19,10 @@
     <color name="grey_a9a9a9">#a9a9a9</color>
     <color name="grey_949494">#949494</color>
     <color name="grey_808080">#808080</color>
+    <color name="grey_3f3f3f">#3f3f3f</color>
+    <color name="grey_6a6a6a">#6a6a6a</color>
 
+    <!--WHITE-->
+    <color name="white_bg">#f7f7f7</color>
 
 </resources>
