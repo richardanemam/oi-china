@@ -43,7 +43,6 @@ class LessonsActivity : AppCompatActivity() {
 
     private fun addingFragments() {
         val viewPagerAdapter = ViewPagerAdapter(supportFragmentManager)
-
         viewPagerAdapter.addFragment(FragmentBasic(), "Básico")
         viewPagerAdapter.addFragment(FragmentIntermediate(), "Intermediário")
         setUpAdapter(viewPagerAdapter)
