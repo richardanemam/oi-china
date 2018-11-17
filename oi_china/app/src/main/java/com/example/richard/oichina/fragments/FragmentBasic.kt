@@ -32,14 +32,14 @@ class FragmentBasic : Fragment() {
         val lessons = setData()
         setRecyclerView(lessons)
     }
-
     private fun setData(): ArrayList<LessonModel> {
         val paises = arrayOf("Brazil", "Brazil", "China", "China", "USA", "USA")
         val cidades = arrayOf("Sao Paulo", "Rio de Janeiro", "Beijing", "Shanghai", "New York City", "Maimi")
+        val lessonNumebers = arrayOf("一", "二", "三", "四", "五", "六")
 
         val lessons = arrayListOf<LessonModel>()
         for (i in paises.indices) {
-            val lesson = LessonModel(paises[i], cidades[i])
+            val lesson = LessonModel(paises[i], cidades[i], lessonNumebers[i])
             lessons.add(lesson)
         }
         return lessons

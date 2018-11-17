@@ -15,6 +15,7 @@ class LessonAdapter(private val lessonList: ArrayList<LessonModel>,
     override fun onBindViewHolder(holder: LessonViewHolder, position: Int) {
         holder.lessonTitle.text = lessonList.get(position).getTitle()
         holder.lessonDescription.text = lessonList.get(position).getDescription()
+        holder.lessonNumber.text = lessonList.get(position).getLessonNumber()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LessonViewHolder {
@@ -28,5 +29,6 @@ class LessonAdapter(private val lessonList: ArrayList<LessonModel>,
     class LessonViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val lessonTitle = view.tv_lesson_title
         val lessonDescription = view.tv_lesson_description
+        val lessonNumber = view.tv_lesson_number
     }
 }

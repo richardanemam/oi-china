@@ -6,7 +6,7 @@
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -25,13 +25,38 @@
             android:layout_gravity="center">
 
             <TextView
+                android:id="@+id/tv_lesson_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="一"
+                android:textColor="@color/blue_67AECA"
+                android:textSize="16sp"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/view_vertical_divider"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view_vertical_divider"
+                android:layout_width="1dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="48dp"
+                android:background="@color/grey_d3d3d3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
                 android:id="@+id/tv_lesson_title"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:gravity="center"
+                android:layout_marginStart="64dp"
+                android:gravity="start"
                 android:text="Qual é o seu nome?"
                 android:textAllCaps="false"
                 android:textColor="@color/black_000000"
+                android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -40,14 +65,25 @@
                 android:id="@+id/tv_lesson_description"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="64dp"
                 android:layout_marginBottom="8dp"
-                android:gravity="center"
+                android:gravity="start"
                 android:text="Pronomes, País de Origem e Idioma"
                 android:textColor="@color/grey_808080"
+                android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_lesson_title" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/foward_grey_arrow"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
         </android.support.constraint.ConstraintLayout>
     </android.support.v7.widget.CardView>
 
