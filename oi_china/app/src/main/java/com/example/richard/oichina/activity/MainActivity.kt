@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.Button
 import com.example.richard.oichina.R
+import kotlinx.android.synthetic.main.activity_main.*
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,7 +21,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setUpVariables() {
-        btnLicoes = findViewById(R.id.btn_licoes)
+        btnLicoes = btn_licoes
     }
 
     private fun setUpClickHandle() {

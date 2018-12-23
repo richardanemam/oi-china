@@ -15,29 +15,27 @@ import kotlinx.android.synthetic.main.basic_fragment.*
  * Created by Richard on 9/23/2018.
  */
 
-class FragmentBasic : Fragment() {
+class BasicLessonFragment : Fragment() {
+
+    fun newInstance(infoBasicLessonList: ArrayList<LessonModel>): BasicLessonFragment {
+        val basicLessonFragment = BasicLessonFragment()
+
+        val args = Bundle()
+        args.putSerializable("listOfBasicLessonsInfo", infoBasicLessonList)
+        basicLessonFragment.arguments = args
+
+        return basicLessonFragment
+    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+
         return inflater.inflate(R.layout.basic_fragment, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        val lessonsList = setData()
-        setRecyclerView(lessonsList)
-    }
-
-    private fun setData(): ArrayList<LessonModel> {
-        val paises = arrayOf("Brazil", "Brazil", "China", "China", "USA", "USA")
-        val cidades = arrayOf("Sao Paulo", "Rio de Janeiro", "Beijing", "Shanghai", "New York City", "Maimi")
-        val lessonNumebers = arrayOf("一", "二", "三", "四", "五", "六")
-        val lessons = arrayListOf<LessonModel>()
-
-        for (i in paises.indices) {
-            val lesson = LessonModel(paises[i], cidades[i], lessonNumebers[i])
-            lessons.add(lesson)
-        }
-        return lessons
+        val lessonsList = arguments?.getSerializable("listOfBasicLessonsInfo")
+        setRecyclerView(lessonsList as ArrayList<LessonModel>)
     }
 
     private fun setRecyclerView(lesson: ArrayList<LessonModel>) {
