@@ -8,7 +8,7 @@ import android.support.v7.widget.Toolbar
 import com.example.richard.oichina.R
 import com.example.richard.oichina.adapter.ViewPagerAdapter
 import com.example.richard.oichina.fragments.BasicLessonFragment
-import com.example.richard.oichina.fragments.FragmentIntermediate
+import com.example.richard.oichina.fragments.IntermediateLessonFragment
 import com.example.richard.oichina.model.LessonModel
 import com.example.richard.oichina.model.LessonsDao
 import kotlinx.android.synthetic.main.lessons.*
@@ -47,7 +47,7 @@ class LessonsActivity : AppCompatActivity() {
     private fun addListToView(list: ArrayList<LessonModel>) {
         val viewPagerAdapter = ViewPagerAdapter(supportFragmentManager)
         viewPagerAdapter.addFragment(BasicLessonFragment().newInstance(list), "Básico")
-        viewPagerAdapter.addFragment(FragmentIntermediate(), "Intermediário") //TODO add list to intermediate fragment
+        viewPagerAdapter.addFragment(IntermediateLessonFragment(), "Intermediário") //TODO add list to intermediate fragment
         setUpAdapter(viewPagerAdapter)
     }
 

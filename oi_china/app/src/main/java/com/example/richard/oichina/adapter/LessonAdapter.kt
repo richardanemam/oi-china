@@ -5,17 +5,24 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import com.example.richard.oichina.R
 import com.example.richard.oichina.model.LessonModel
 import kotlinx.android.synthetic.main.item_lesson.view.*
 
+
 class LessonAdapter(private val lessonList: ArrayList<LessonModel>,
-                    private val context: Context) : RecyclerView.Adapter<LessonAdapter.LessonViewHolder>() {
+                    private val context: Context,
+                    private val listener: ItemClickListener) : RecyclerView.Adapter<LessonAdapter.LessonViewHolder>() {
+
+    interface ItemClickListener {
+        fun onItemClick(item: View, position: Int)
+    }
 
     override fun onBindViewHolder(holder: LessonViewHolder, position: Int) {
-        holder.lessonTitle.text = lessonList.get(position).getTitle()
-        holder.lessonDescription.text = lessonList.get(position).getDescription()
-        holder.lessonNumber.text = lessonList.get(position).getLessonNumber()
+        holder.lessonTitle.text = lessonList[position].getTitle()
+        holder.lessonDescription.text = lessonList[position].getDescription()
+        holder.lessonNumber.text = lessonList[position].getLessonNumber()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LessonViewHolder {
@@ -26,9 +33,20 @@ class LessonAdapter(private val lessonList: ArrayList<LessonModel>,
         return lessonList.size
     }
 
-    class LessonViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val lessonTitle = view.tv_lesson_title
-        val lessonDescription = view.tv_lesson_description
-        val lessonNumber = view.tv_lesson_number
+    inner class LessonViewHolder(view: View) : RecyclerView.ViewHolder(view), View.OnClickListener {
+
+        val lessonTitle: TextView = view.tv_lesson_title
+        val lessonDescription: TextView = view.tv_lesson_description
+        val lessonNumber: TextView = view.tv_lesson_number
+
+        init {
+            view.tag = view
+            view.setOnClickListener(this)
+        }
+
+        override fun onClick(view: View) {
+            listener.onItemClick(view, adapterPosition)
+        }
     }
 }
+
