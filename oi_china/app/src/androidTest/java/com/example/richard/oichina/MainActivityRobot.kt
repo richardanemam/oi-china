@@ -4,21 +4,23 @@ import android.content.Intent
 import android.support.test.espresso.Espresso.onView
 import android.support.test.espresso.action.ViewActions.click
 import android.support.test.espresso.assertion.ViewAssertions.matches
+import android.support.test.espresso.intent.Intents.intended
+import android.support.test.espresso.intent.matcher.IntentMatchers.hasComponent
 import android.support.test.espresso.matcher.ViewMatchers.*
 import android.support.test.rule.ActivityTestRule
+import com.example.richard.oichina.activity.LessonsActivity
 import com.example.richard.oichina.activity.MainActivity
 import org.hamcrest.CoreMatchers.endsWith
 import org.junit.Assert.assertTrue
-
 
 object MainActivityRobotConstants {
     val LICAO = "Lições"
 }
 
-class MainActivityPrepara(val acttivityTestRule: ActivityTestRule<MainActivity>) {
+class MainActivityPrepara(val activityTestRule: ActivityTestRule<MainActivity>) {
     internal fun startActivity() {
         val intent = Intent(Intent.ACTION_PICK)
-        acttivityTestRule.launchActivity(intent)
+        activityTestRule.launchActivity(intent)
     }
 }
 
@@ -38,7 +40,11 @@ class MainActivityExecuta {
 
 class MainActivityValida(val activityTestRule: ActivityTestRule<MainActivity>) {
     internal fun isFinishingActivity() {
-        assertTrue(activityTestRule.activity.isDestroyed)
+        assertTrue(activityTestRule.activity.isFinishing)
+    }
+
+    internal fun checkIntentToLessonsActivity() {
+        intended(hasComponent(LessonsActivity::class.java.name))
     }
 
     internal fun checkToolbarAndItsContent() {

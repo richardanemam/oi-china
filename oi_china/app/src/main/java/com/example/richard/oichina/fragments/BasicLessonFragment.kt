@@ -28,7 +28,8 @@ class BasicLessonFragment : Fragment(), LessonAdapter.ItemClickListener {
         return basicLessonFragment
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+                              savedInstanceState: Bundle?): View? {
 
         return inflater.inflate(R.layout.basic_fragment, container, false)
     }
@@ -42,7 +43,8 @@ class BasicLessonFragment : Fragment(), LessonAdapter.ItemClickListener {
 
     private fun setRecyclerView(lesson: ArrayList<LessonModel>) {
         val recyclerView = rv_basic_lessons
-        val layout = LinearLayoutManager(this.context, LinearLayoutManager.VERTICAL, false)
+        val layout = LinearLayoutManager(this.context, LinearLayoutManager.VERTICAL,
+                false)
         recyclerView.layoutManager = layout
         recyclerView.adapter = LessonAdapter(lesson, this.context!!, this)
     }
