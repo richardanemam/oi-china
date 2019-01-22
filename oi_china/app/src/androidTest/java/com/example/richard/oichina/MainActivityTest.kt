@@ -27,14 +27,14 @@ class MainActivityTest {
         Intents.release()
     }
 
-    private fun prepara(func: MainActivityPrepara.() -> Unit) = MainActivityPrepara(activityTestRule)
-            .apply { func() }
+    private fun prepara(func: MainActivityPrepara.() -> Unit) =
+            MainActivityPrepara(activityTestRule).apply(func)
 
-    private fun executa(func: MainActivityExecuta.() -> Unit) = MainActivityExecuta()
-            .apply(func)
+    private fun executa(func: MainActivityExecuta.() -> Unit) =
+            MainActivityExecuta().apply(func)
 
-    private fun valida(func: MainActivityValida.() -> Unit) = MainActivityValida(activityTestRule)
-            .apply(func)
+    private fun valida(func: MainActivityValida.() -> Unit) =
+            MainActivityValida(activityTestRule).apply(func)
 
     @Test
     fun whenClickInLicaoItShouldOpenLicaoActivity() {
@@ -57,7 +57,6 @@ class MainActivityTest {
         prepara {
             startActivity()
         }
-        executa {}
         valida {
             checkToolbarAndItsContent()
         }

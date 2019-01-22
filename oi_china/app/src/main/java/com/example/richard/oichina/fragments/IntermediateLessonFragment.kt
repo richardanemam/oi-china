@@ -10,7 +10,7 @@ import android.widget.Toast
 import com.example.richard.oichina.R
 import com.example.richard.oichina.adapter.LessonAdapter
 import com.example.richard.oichina.model.LessonModel
-import kotlinx.android.synthetic.main.basic_fragment.*
+import kotlinx.android.synthetic.main.intermediate_fragment.*
 
 /**
  * Created by Richard on 9/23/2018.
@@ -44,7 +44,7 @@ class IntermediateLessonFragment : Fragment(), LessonAdapter.ItemClickListener {
     }
 
     private fun setRecyclerView(lesson: ArrayList<LessonModel>) {
-        val recyclerView = rv_basic_lessons
+        val recyclerView = rv_itermediate_lessons
         val layout = LinearLayoutManager(this.context, LinearLayoutManager.VERTICAL, false)
         recyclerView.layoutManager = layout
         recyclerView.adapter = LessonAdapter(lesson, this.context!!, this)
