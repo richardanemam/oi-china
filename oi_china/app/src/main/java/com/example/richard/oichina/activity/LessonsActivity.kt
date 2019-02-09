@@ -5,6 +5,8 @@ import android.support.design.widget.TabLayout
 import android.support.v4.view.ViewPager
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
+import android.view.View.GONE
+import android.widget.ProgressBar
 import com.example.richard.oichina.R
 import com.example.richard.oichina.adapter.ViewPagerAdapter
 import com.example.richard.oichina.fragments.BasicLessonFragment
@@ -22,6 +24,7 @@ class LessonsActivity : AppCompatActivity() {
     private lateinit var tabLayout: TabLayout
     private lateinit var toolBar: Toolbar
     private lateinit var viewPager: ViewPager
+    private lateinit var progressBar: ProgressBar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +39,7 @@ class LessonsActivity : AppCompatActivity() {
         tabLayout = tabLayout_id
         toolBar = toolbar_id
         viewPager = viewpager_id
+        progressBar = progressBar_id
     }
 
     private fun setUpToolBar() {
@@ -54,6 +58,7 @@ class LessonsActivity : AppCompatActivity() {
     private fun setUpAdapter(viewPagerAdapter: ViewPagerAdapter) {
         viewPager.adapter = viewPagerAdapter
         tabLayout.setupWithViewPager(viewPager)
+        progressBar.visibility = GONE
     }
 
     private fun addingFragments() {

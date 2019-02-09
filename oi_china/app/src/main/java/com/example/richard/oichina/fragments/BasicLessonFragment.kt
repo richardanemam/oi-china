@@ -37,7 +37,7 @@ class BasicLessonFragment : Fragment(), LessonAdapter.ItemClickListener {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         val lessonsList = arguments?.getSerializable("listOfBasicLessonsInfo")
-        setRecyclerView(lessonsList as ArrayList<LessonModel>)
+        setRecyclerView(lesson = lessonsList as ArrayList<LessonModel>)
         arguments?.remove("listOfBasicLessonsInfo")
     }
 
