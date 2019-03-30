@@ -10,7 +10,7 @@ import android.widget.Toast
 import com.example.richard.oichina.R
 import com.example.richard.oichina.adapter.LessonAdapter
 import com.example.richard.oichina.model.LessonModel
-import kotlinx.android.synthetic.main.intermediate_fragment.*
+import kotlinx.android.synthetic.main.fragment_intermediate_lesson.*
 
 /**
  * Created by Richard on 9/23/2018.
@@ -19,7 +19,7 @@ import kotlinx.android.synthetic.main.intermediate_fragment.*
 class IntermediateLessonFragment : Fragment(), LessonAdapter.ItemClickListener {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.intermediate_fragment, container, false)
+        return inflater.inflate(R.layout.fragment_intermediate_lesson, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -47,7 +47,7 @@ class IntermediateLessonFragment : Fragment(), LessonAdapter.ItemClickListener {
         val recyclerView = rv_itermediate_lessons
         val layout = LinearLayoutManager(this.context, LinearLayoutManager.VERTICAL, false)
         recyclerView.layoutManager = layout
-        recyclerView.adapter = LessonAdapter(lesson, this.context!!, this)
+        recyclerView.adapter = LessonAdapter(lesson, this)
     }
 
     override fun onItemClick(item: View, position: Int) {
