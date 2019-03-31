@@ -1,22 +1,20 @@
 package com.example.richard.oichina.activity
 
+import android.annotation.SuppressLint
 import android.app.DialogFragment
 import android.content.Intent
 import android.os.Bundle
-import android.support.design.widget.TabLayout
-import android.support.v4.view.ViewPager
+import android.support.v4.app.FragmentTransaction
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
 import android.view.View.GONE
 import android.widget.ProgressBar
 import com.example.richard.oichina.R
-import com.example.richard.oichina.adapter.ViewPagerAdapter
 import com.example.richard.oichina.fragments.BasicLessonFragment
 import com.example.richard.oichina.fragments.ErrorDialogFragment
-import com.example.richard.oichina.fragments.IntermediateLessonFragment
 import com.example.richard.oichina.model.LessonModel
 import com.example.richard.oichina.model.LessonsDao
-import kotlinx.android.synthetic.main.lessons.*
+import kotlinx.android.synthetic.main.activity_lessons.*
 
 /**
  * Created by Richard on 9/23/2018.
@@ -24,25 +22,24 @@ import kotlinx.android.synthetic.main.lessons.*
 
 class LessonsActivity : AppCompatActivity(), ErrorDialogFragment.ErrorDialogListener {
 
-    private lateinit var tabLayout: TabLayout
     private lateinit var toolBar: Toolbar
-    private lateinit var viewPager: ViewPager
     private lateinit var progressBar: ProgressBar
+    private lateinit var fragmentTransaction: FragmentTransaction
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.lessons)
+        setContentView(R.layout.activity_lessons)
 
         setUpVariables()
         setUpToolBar()
         addingFragments()
     }
 
+    @SuppressLint("CommitTransaction")
     private fun setUpVariables() {
-        tabLayout = tabLayout_id
         toolBar = toolbar_id
-        viewPager = viewpager_id
         progressBar = progressBar_id
+        fragmentTransaction = supportFragmentManager.beginTransaction()
     }
 
     private fun setUpToolBar() {
@@ -53,18 +50,16 @@ class LessonsActivity : AppCompatActivity(), ErrorDialogFragment.ErrorDialogList
 
     private fun addListToView(list: ArrayList<LessonModel>) {
         try {
-            val viewPagerAdapter = ViewPagerAdapter(supportFragmentManager)
-            viewPagerAdapter.addFragment(BasicLessonFragment().newInstance(list), "Básico")
-            viewPagerAdapter.addFragment(IntermediateLessonFragment(), "Intermediário") //TODO add list to intermediate fragment
-            setUpAdapter(viewPagerAdapter)
+            fragmentTransaction
+                    .add(R.id.fl_place_holder, BasicLessonFragment().newInstance(list))
+                    .commit()
+            setUpProgressBarVisibility()
         } catch (e: Exception) {
             showErrorDialog()
         }
     }
 
-    private fun setUpAdapter(viewPagerAdapter: ViewPagerAdapter) {
-        viewPager.adapter = viewPagerAdapter
-        tabLayout.setupWithViewPager(viewPager)
+    private fun setUpProgressBarVisibility() {
         progressBar.visibility = GONE
     }
 

@@ -15,6 +15,7 @@
     <string name="dialog_title">Em uma galáxia muito distante&#8230;</string>
     <string name="error_fragment">&#8230;algo parece estar errado. 对不起！</string>
     <string name="try_again_button">tentar novamente</string>
-    <string name="lesson_description">Aprenda Mandarim com lições simples e rápidas</string>
+    <string name="lesson_description">Lições para o seu Mandarim</string>
+    <string name="lesson_description_2">ir mais longe.</string>
 
 </resources>
