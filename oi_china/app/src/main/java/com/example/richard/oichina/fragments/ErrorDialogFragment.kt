@@ -2,9 +2,9 @@ package com.example.richard.oichina.fragments
 
 import android.app.AlertDialog
 import android.app.Dialog
-import android.app.DialogFragment
 import android.content.Context
 import android.os.Bundle
+import androidx.fragment.app.DialogFragment
 
 class ErrorDialogFragment : DialogFragment() {
 
@@ -29,9 +29,9 @@ class ErrorDialogFragment : DialogFragment() {
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
 
-        title = arguments.getString("title")
-        message = arguments.getString("errorMessage")
-        tryAgain = arguments.getString("tryAgain")
+        title = arguments!!.getString("title", "algo esta errado, sorry!")
+        message = arguments!!.getString("errorMessage", "algo esta errado, sorry!")
+        tryAgain = arguments!!.getString("tryAgain", "algo esta errado, sorry!")
 
         val builder = AlertDialog.Builder(activity)
         builder.setTitle(title)
@@ -42,7 +42,7 @@ class ErrorDialogFragment : DialogFragment() {
         return builder.create()
     }
 
-    override fun onAttach(context: Context?) {
+    override fun onAttach(context: Context) {
         super.onAttach(context)
         try {
             // Instantiate the ErrorDialogListener so we can send events to the host

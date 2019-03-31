@@ -1,10 +1,7 @@
 package com.example.richard.oichina
 
-import android.support.test.espresso.intent.Intents
-import android.support.test.rule.ActivityTestRule
+import androidx.test.espresso.intent.rule.IntentsTestRule
 import com.example.richard.oichina.activity.LessonsActivity
-import org.junit.After
-import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 
@@ -12,60 +9,16 @@ class LessonsActivityTest {
 
     @Rule
     @JvmField
-    val activityTestRule = ActivityTestRule(LessonsActivity::class.java)
-
-    @Before
-    fun setUp() {
-        Intents.init()
-    }
-
-    @After
-    fun endUp() {
-        Intents.release()
-    }
+    val intentsTestRule = IntentsTestRule(LessonsActivity::class.java, true, false)
 
     private fun prepara(func: LessonsActivityPrepara.() -> Unit) =
-            LessonsActivityPrepara(activityTestRule).apply(func)
+            LessonsActivityPrepara(intentsTestRule).apply(func)
 
     private fun executa(func: LessonsActivityExecuta.() -> Unit) =
             LessonsActivityExecuta().apply(func)
 
     private fun valida(func: LessonsActivityValida.() -> Unit) =
             LessonsActivityValida().apply(func)
-
-    @Test
-    fun checkToolbarWhetherToolbarIsDisplayed() {
-        prepara {
-            startActivity()
-        }
-        valida {
-            toolbarIsDisplayed()
-        }
-    }
-
-    @Test
-    fun checkWhetherTabLayoutIsDisplayed() {
-        prepara {
-            startActivity()
-        }
-        valida {
-            tabLayoutIsDisplayed()
-        }
-    }
-
-    @Test
-    fun checkWhetherSwipeIsWorking() {
-        prepara {
-            startActivity()
-        }
-        executa {
-            swipeIsWorking()
-        }
-        valida {
-            toolbarIsDisplayed()
-            tabLayoutIsDisplayed()
-        }
-    }
 
     @Test
     fun clickOnARecyclerViewItem() {
@@ -77,7 +30,6 @@ class LessonsActivityTest {
         }
         valida {
             toolbarIsDisplayed()
-            tabLayoutIsDisplayed()
         }
     }
 }

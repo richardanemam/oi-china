@@ -1,14 +1,14 @@
 package com.example.richard.oichina.activity
 
 import android.annotation.SuppressLint
-import android.app.DialogFragment
 import android.content.Intent
 import android.os.Bundle
-import android.support.v4.app.FragmentTransaction
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.Toolbar
 import android.view.View.GONE
 import android.widget.ProgressBar
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
+import androidx.fragment.app.DialogFragment
+import androidx.fragment.app.FragmentTransaction
 import com.example.richard.oichina.R
 import com.example.richard.oichina.fragments.BasicLessonFragment
 import com.example.richard.oichina.fragments.ErrorDialogFragment
@@ -70,7 +70,7 @@ class LessonsActivity : AppCompatActivity(), ErrorDialogFragment.ErrorDialogList
     private fun showErrorDialog() {
         val dialog = ErrorDialogFragment().newInstance(getString(R.string.dialog_title), getString(R.string.error_fragment),
                 getString(R.string.try_again_button))
-        dialog.show(fragmentManager, "NoticeDialogFragment")
+        dialog.show(supportFragmentManager, "NoticeDialogFragment")
     }
 
     override fun onDialogPositiveClick(dialog: DialogFragment) {

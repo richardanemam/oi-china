@@ -1,40 +1,24 @@
 package com.example.richard.oichina
 
-import android.support.test.espresso.intent.Intents
-import android.support.test.rule.ActivityTestRule
-import android.support.test.runner.AndroidJUnit4
+import androidx.test.espresso.intent.rule.IntentsTestRule
 import com.example.richard.oichina.activity.MainActivity
-import org.junit.After
-import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
-import org.junit.runner.RunWith
 
-@RunWith(AndroidJUnit4::class)
 class MainActivityTest {
 
     @Rule
     @JvmField
-    val activityTestRule = ActivityTestRule(MainActivity::class.java)
-
-    @Before
-    fun setUp() {
-        Intents.init()
-    }
-
-    @After
-    fun endUp() {
-        Intents.release()
-    }
+    val intentsTestRule = IntentsTestRule(MainActivity::class.java, true, false)
 
     private fun prepara(func: MainActivityPrepara.() -> Unit) =
-            MainActivityPrepara(activityTestRule).apply(func)
+            MainActivityPrepara(intentsTestRule).apply(func)
 
     private fun executa(func: MainActivityExecuta.() -> Unit) =
             MainActivityExecuta().apply(func)
 
     private fun valida(func: MainActivityValida.() -> Unit) =
-            MainActivityValida(activityTestRule).apply(func)
+            MainActivityValida(intentsTestRule).apply(func)
 
     @Test
     fun whenClickInLicaoItShouldOpenLicaoActivity() {
