@@ -8,6 +8,13 @@ import androidx.fragment.app.DialogFragment
 
 class ErrorDialogFragment : DialogFragment() {
 
+    companion object {
+        const val TITLE = "title"
+        const val ERRORS_MESSAGE = "errorMessage"
+        const val TRY_AGAIN = "tryAgain"
+        const val DEFAULT_VALUE = "algo esta errado, sorry!"
+    }
+
     private lateinit var title: String
     private lateinit var message: String
     private lateinit var tryAgain: String
@@ -20,18 +27,18 @@ class ErrorDialogFragment : DialogFragment() {
     fun newInstance(title: String, message: String, tryAgainButton: String): ErrorDialogFragment {
         val errorDialog = ErrorDialogFragment()
         val args = Bundle()
-        args.putString("title", title)
-        args.putString("errorMessage", message)
-        args.putString("tryAgain", tryAgainButton)
+        args.putString(TITLE, title)
+        args.putString(ERRORS_MESSAGE, message)
+        args.putString(TRY_AGAIN, tryAgainButton)
         errorDialog.arguments = args
         return errorDialog
     }
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
 
-        title = arguments!!.getString("title", "algo esta errado, sorry!")
-        message = arguments!!.getString("errorMessage", "algo esta errado, sorry!")
-        tryAgain = arguments!!.getString("tryAgain", "algo esta errado, sorry!")
+        title = arguments!!.getString(TITLE, DEFAULT_VALUE)
+        message = arguments!!.getString(ERRORS_MESSAGE, DEFAULT_VALUE)
+        tryAgain = arguments!!.getString(TRY_AGAIN, DEFAULT_VALUE)
 
         val builder = AlertDialog.Builder(activity)
         builder.setTitle(title)
