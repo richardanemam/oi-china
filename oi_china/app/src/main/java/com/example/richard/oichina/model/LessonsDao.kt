@@ -17,7 +17,7 @@ class LessonsDao(val db: FirebaseFirestore = FirebaseFirestore.getInstance()) {
                         for (document in task.result!!) {
                             val lessonInfo = LessonModel(document.data["title"].toString(),
                                     document.data["description"].toString(),
-                                    document.data["lessonNumber"].toString())
+                                    document.data["number"].toString())
                             listOfLessons.add(lessonInfo)
                             Log.d(TAG2, document.id + "=>" + document.data)
                         }

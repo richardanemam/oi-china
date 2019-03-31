@@ -9,9 +9,9 @@ import com.example.richard.oichina.R
 import com.example.richard.oichina.model.LessonModel
 import kotlinx.android.synthetic.main.item_lesson.view.*
 
-
 class LessonAdapter(private val lessonList: ArrayList<LessonModel>,
-                    private val listener: ItemClickListener) : RecyclerView.Adapter<LessonAdapter.LessonViewHolder>() {
+                    private val listener: ItemClickListener) :
+        RecyclerView.Adapter<LessonAdapter.LessonViewHolder>() {
 
     interface ItemClickListener {
         fun onItemClick(item: View, position: Int)
@@ -24,7 +24,8 @@ class LessonAdapter(private val lessonList: ArrayList<LessonModel>,
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LessonViewHolder {
-        return LessonViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_lesson, parent, false))
+        return LessonViewHolder(LayoutInflater.from(parent.context)
+                .inflate(R.layout.item_lesson, parent, false))
     }
 
     override fun getItemCount(): Int {
@@ -46,4 +47,3 @@ class LessonAdapter(private val lessonList: ArrayList<LessonModel>,
         }
     }
 }
-
