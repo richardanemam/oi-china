@@ -38,7 +38,6 @@ class LessonAdapter(private val lessonList: ArrayList<LessonModel>,
         val lessonNumber: TextView = view.tv_lesson_number
 
         init {
-            view.tag = view
             view.setOnClickListener(this)
         }
 

@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.richard.oichina.R
 import com.example.richard.oichina.adapter.LessonAdapter
 import com.example.richard.oichina.model.LessonModel
@@ -43,7 +44,7 @@ class BasicLessonFragment : Fragment(), LessonAdapter.ItemClickListener {
 
     private fun setRecyclerView(lesson: ArrayList<LessonModel>) {
         val recyclerView = rv_basic_lessons
-        val layout = LinearLayoutManager(this.context, LinearLayoutManager.VERTICAL,
+        val layout = LinearLayoutManager(this.context, RecyclerView.VERTICAL,
                 false)
         recyclerView.layoutManager = layout
         recyclerView.adapter = LessonAdapter(lesson, this)
