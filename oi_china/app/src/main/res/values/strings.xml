@@ -18,4 +18,27 @@
     <string name="lesson_description">Lições para o seu Mandarim</string>
     <string name="lesson_description_2">ir mais longe.</string>
 
+    <!--Pinyin Activity-->
+    <string name="pinyin_title">Pinyin</string>
+    <string name="whats_pinyin">O que é pinyin?</string>
+    <string name="pinyin_description">Como podemos reproduzir o som de um caractere como 吗？A
+        resposta é: com o pinyin. O pinyin é a romanização dos caracteres chineses baseados em sua
+        pronúncia. Pinyin significa <b>som soletrado</b> e é por meio dele que podemos compreender
+        os sons do Mandarim</string>
+    <string name="pinyin_example_title">Exemplo</string>
+    <string name="pinyin_example_caracter"><b>Caracteres:</b> 我是巴西人</string>
+    <string name="pinyin_example_pinyin"><b>Pinyin:</b> wǒ shì bāxī rén</string>
+    <string name="pinyin_tones">Os tons do Mandarim</string>
+    <string name="pinyin_tones_description">O Mandarim é uma língua fonética em que os tons podem
+        diferenciar o significado de uma mesma sílaba. O mandarim possui quatro tons principais e
+        um tom neutro.</string>
+    <string name="pinyin_first_tone_description"><b>Primeiro tom:</b> Alto e constante</string>
+    <string name="pinyin_second_tone_description"><b>Segundo tom:</b> Cresce moderadamente</string>
+    <string name="pinyin_third_tone_description"><b>Terceiro tom:</b> O tom inicialmente é baixo,
+        então ele decresce, ficando ainda mais baixo e logo cresce. É um som grave em um tom baixo.</string>
+    <string name="pinyin_fourth_tone_description"><b>Quarto tom:</b> Descrece rapidamente</string>
+    <string name="pinyin_neutral_tone_description"><b>Tom Neutro:</b> Não possui tonalidade e é
+        pronunciado rapidamente. Este tom não possui qualquer acentuação.</string>
+    <string name="pinyin_chart_content_description">Mapeamento dos tons do mandarim</string>
+
 </resources>

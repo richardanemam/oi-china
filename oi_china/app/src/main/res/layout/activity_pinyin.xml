@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_pinyin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_pinyin"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:titleTextColor="@color/black_000000" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appbar_pinyin">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_whats_pinyin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_pinyin_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/whats_pinyin"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="32sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_pinyin_description"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/pinyin_description"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="@id/tv_pinyin_title"
+                        app:layout_constraintStart_toStartOf="@+id/tv_pinyin_title"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_pinyin_title" />
+
+                    <TextView
+                        android:id="@+id/tv_pinyin_title_example"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/pinyin_example_title"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="24sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="@id/tv_pinyin_title"
+                        app:layout_constraintStart_toStartOf="@id/tv_pinyin_title"
+                        app:layout_constraintTop_toBottomOf="@id/tv_pinyin_description" />
+
+                    <TextView
+                        android:id="@+id/tv_pinyin_caracter_example"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/pinyin_example_caracter"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="@id/tv_pinyin_title"
+                        app:layout_constraintStart_toStartOf="@+id/tv_pinyin_title"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_pinyin_title_example" />
+
+                    <TextView
+                        android:id="@+id/tv_pinyin_pinyin_example"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/pinyin_example_pinyin"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@id/tv_pinyin_title"
+                        app:layout_constraintStart_toStartOf="@+id/tv_pinyin_title"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_pinyin_caracter_example" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_pinyin_tons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cv_whats_pinyin">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_pinyin_tones"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/pinyin_tones"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="32sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_pinyin_tones_description"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/pinyin_tones_description"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="@id/tv_pinyin_tones"
+                        app:layout_constraintStart_toStartOf="@+id/tv_pinyin_tones"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_pinyin_tones" />
+
+                    <ImageView
+                        android:id="@+id/iv_pinyin_tones"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:contentDescription="@string/pinyin_chart_content_description"
+                        android:src="@drawable/tones"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_pinyin_tones_description"
+                        app:layout_constraintStart_toStartOf="@+id/tv_pinyin_tones_description"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_pinyin_tones_description" />
+
+                    <TextView
+                        android:id="@+id/tv_pinyin_first_tone"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/pinyin_first_tone_description"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="@id/tv_pinyin_tones_description"
+                        app:layout_constraintStart_toStartOf="@+id/tv_pinyin_tones_description"
+                        app:layout_constraintTop_toBottomOf="@+id/iv_pinyin_tones" />
+
+                    <TextView
+                        android:id="@+id/tv_pinyin_second_tone"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/pinyin_second_tone_description"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="@id/tv_pinyin_tones_description"
+                        app:layout_constraintStart_toStartOf="@+id/tv_pinyin_tones_description"
+                        app:layout_constraintTop_toBottomOf="@id/tv_pinyin_first_tone" />
+
+                    <TextView
+                        android:id="@+id/tv_pinyin_third_tone"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/pinyin_third_tone_description"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="@id/tv_pinyin_tones_description"
+                        app:layout_constraintStart_toStartOf="@+id/tv_pinyin_tones_description"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_pinyin_second_tone" />
+
+                    <TextView
+                        android:id="@+id/tv_pinyin_fourth_tone"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/pinyin_fourth_tone_description"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="@id/tv_pinyin_tones_description"
+                        app:layout_constraintStart_toStartOf="@+id/tv_pinyin_tones_description"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_pinyin_third_tone" />
+
+                    <TextView
+                        android:id="@+id/tv_pinyin_neutral_tone"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/pinyin_neutral_tone_description"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@id/tv_pinyin_tones_description"
+                        app:layout_constraintStart_toStartOf="@+id/tv_pinyin_tones_description"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_pinyin_fourth_tone" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

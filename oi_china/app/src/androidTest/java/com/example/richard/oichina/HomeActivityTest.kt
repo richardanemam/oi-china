@@ -1,15 +1,15 @@
 package com.example.richard.oichina
 
 import androidx.test.espresso.intent.rule.IntentsTestRule
-import com.example.richard.oichina.activity.MainActivity
+import com.example.richard.oichina.activity.HomeActivity
 import org.junit.Rule
 import org.junit.Test
 
-class MainActivityTest {
+class HomeActivityTest {
 
     @Rule
     @JvmField
-    val intentsTestRule = IntentsTestRule(MainActivity::class.java, true, false)
+    val intentsTestRule = IntentsTestRule(HomeActivity::class.java, true, false)
 
     private fun prepara(func: MainActivityPrepara.() -> Unit) =
             MainActivityPrepara(intentsTestRule).apply(func)
@@ -35,14 +35,4 @@ class MainActivityTest {
 
     //TODO Test for the Expressions Button
     //TODO Test for the About Button
-
-    @Test
-    fun checkToolbarAndItsContent() {
-        prepara {
-            startActivity()
-        }
-        valida {
-            checkToolbarAndItsContent()
-        }
-    }
 }

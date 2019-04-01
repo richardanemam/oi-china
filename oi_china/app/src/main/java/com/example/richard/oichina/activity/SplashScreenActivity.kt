@@ -17,7 +17,7 @@ class SplashScreenActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash_screen)
         val secondsDelayed = 3
         Handler().postDelayed({
-            startActivity(Intent(this@SplashScreenActivity, MainActivity::class.java))
+            startActivity(Intent(this@SplashScreenActivity, HomeActivity::class.java))
             finish()
         }, (secondsDelayed * 1000).toLong())
     }

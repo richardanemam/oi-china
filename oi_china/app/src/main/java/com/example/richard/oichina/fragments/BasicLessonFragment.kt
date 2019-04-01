@@ -1,14 +1,15 @@
 package com.example.richard.oichina.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.richard.oichina.R
+import com.example.richard.oichina.activity.PinyinActivity
 import com.example.richard.oichina.adapter.LessonAdapter
 import com.example.richard.oichina.model.LessonModel
 import kotlinx.android.synthetic.main.fragment_basic_lesson.*
@@ -51,6 +52,12 @@ class BasicLessonFragment : Fragment(), LessonAdapter.ItemClickListener {
     }
 
     override fun onItemClick(item: View, position: Int) {
-        Toast.makeText(context, "Item Clicked:" + position.toString(), Toast.LENGTH_LONG).show()
+
+        when (position) {
+            0 -> {
+                val intent = Intent(context, PinyinActivity::class.java)
+                startActivity(intent)
+            }
+        }
     }
 }

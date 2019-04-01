@@ -74,7 +74,7 @@ class LessonsActivity : AppCompatActivity(), ErrorDialogFragment.ErrorDialogList
     }
 
     override fun onDialogPositiveClick(dialog: DialogFragment) {
-        val intent = Intent(this@LessonsActivity, MainActivity::class.java)
+        val intent = Intent(this@LessonsActivity, HomeActivity::class.java)
         startActivity(intent)
     }
 }

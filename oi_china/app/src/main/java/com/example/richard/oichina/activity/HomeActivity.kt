@@ -5,16 +5,16 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.richard.oichina.R
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_home.*
 
 
-class MainActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity() {
 
     private lateinit var btnLicoes: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_home)
 
         setUpVariables()
         setUpClickHandle()
@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setUpClickHandle() {
         btnLicoes.setOnClickListener {
-            val intent = Intent(this@MainActivity, LessonsActivity::class.java)
+            val intent = Intent(this@HomeActivity, LessonsActivity::class.java)
             startActivity(intent)
         }
     }
