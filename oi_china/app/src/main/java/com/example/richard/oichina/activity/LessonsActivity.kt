@@ -1,6 +1,5 @@
 package com.example.richard.oichina.activity
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.View.GONE
@@ -32,10 +31,9 @@ class LessonsActivity : AppCompatActivity(), ErrorDialogFragment.ErrorDialogList
 
         setUpVariables()
         setUpToolBar()
-        addingFragments()
+        readLessonsData()
     }
 
-    @SuppressLint("CommitTransaction")
     private fun setUpVariables() {
         toolBar = toolbar_id
         progressBar = progressBar_id
@@ -53,17 +51,17 @@ class LessonsActivity : AppCompatActivity(), ErrorDialogFragment.ErrorDialogList
             fragmentTransaction
                     .add(R.id.fl_place_holder, BasicLessonFragment().newInstance(list))
                     .commit()
-            setUpProgressBarVisibility()
+            turnOffProgressBarVisibility()
         } catch (e: Exception) {
             showErrorDialog()
         }
     }
 
-    private fun setUpProgressBarVisibility() {
+    private fun turnOffProgressBarVisibility() {
         progressBar.visibility = GONE
     }
 
-    private fun addingFragments() {
+    private fun readLessonsData() {
         LessonsDao().readDataFromFirestore(this::addListToView)
     }
 
