@@ -1,4 +1,4 @@
-package com.example.richard.oichina
+package com.puhan
 
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.click
@@ -6,8 +6,8 @@ import androidx.test.espresso.intent.Intents.intended
 import androidx.test.espresso.intent.matcher.IntentMatchers.hasComponent
 import androidx.test.espresso.intent.rule.IntentsTestRule
 import androidx.test.espresso.matcher.ViewMatchers.withId
-import com.example.richard.oichina.activity.HomeActivity
-import com.example.richard.oichina.activity.LessonsActivity
+import com.puhan.activity.HomeActivity
+import com.puhan.activity.LessonsActivity
 import org.junit.Assert.assertTrue
 
 object HomeActivityRobotConstants {

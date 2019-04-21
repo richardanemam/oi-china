@@ -1,4 +1,4 @@
-package com.example.richard.oichina.fragments
+package com.puhan.fragments
 
 import android.app.AlertDialog
 import android.app.Dialog

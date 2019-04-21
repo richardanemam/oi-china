@@ -1,4 +1,4 @@
-package com.example.richard.oichina;
+package com.puhan;
 
 import org.junit.Test;
 

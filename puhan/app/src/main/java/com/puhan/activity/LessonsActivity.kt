@@ -1,4 +1,4 @@
-package com.example.richard.oichina.activity
+package com.puhan.activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,11 +8,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.FragmentTransaction
-import com.example.richard.oichina.R
-import com.example.richard.oichina.fragments.BasicLessonFragment
-import com.example.richard.oichina.fragments.ErrorDialogFragment
-import com.example.richard.oichina.model.LessonModel
-import com.example.richard.oichina.model.LessonsDao
+import com.puhan.R
+import com.puhan.fragments.BasicLessonFragment
+import com.puhan.fragments.ErrorDialogFragment
+import com.puhan.model.LessonModel
+import com.puhan.model.LessonsDao
 import kotlinx.android.synthetic.main.activity_lessons.*
 
 /**

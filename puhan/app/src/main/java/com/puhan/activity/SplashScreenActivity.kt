@@ -1,4 +1,4 @@
-package com.example.richard.oichina.activity
+package com.puhan.activity
 
 import android.content.Context
 import android.content.Intent
@@ -7,7 +7,7 @@ import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 
-import com.example.richard.oichina.R
+import com.puhan.R
 
 /**
  * Created by Richard on 9/16/2018.

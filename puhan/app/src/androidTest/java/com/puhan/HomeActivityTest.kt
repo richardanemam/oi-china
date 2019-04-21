@@ -1,7 +1,7 @@
-package com.example.richard.oichina
+package com.puhan
 
 import androidx.test.espresso.intent.rule.IntentsTestRule
-import com.example.richard.oichina.activity.HomeActivity
+import com.puhan.activity.HomeActivity
 import org.junit.Rule
 import org.junit.Test
 

@@ -1,4 +1,4 @@
-package com.example.richard.oichina;
+package com.puhan;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.richard.oichina", appContext.getPackageName());
+        assertEquals("com.puhan", appContext.getPackageName());
     }
 }

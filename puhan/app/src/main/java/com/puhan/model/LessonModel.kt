@@ -1,4 +1,4 @@
-package com.example.richard.oichina.model
+package com.puhan.model
 
 class LessonModel(private var title: String,
                   private var description: String,

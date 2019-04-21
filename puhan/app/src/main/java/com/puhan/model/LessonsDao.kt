@@ -1,4 +1,4 @@
-package com.example.richard.oichina.model
+package com.puhan.model
 
 import android.util.Log
 import com.google.firebase.firestore.FirebaseFirestore

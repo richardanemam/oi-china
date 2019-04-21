@@ -1,8 +1,8 @@
-package com.example.richard.oichina.activity
+package com.puhan.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.richard.oichina.R
+import com.puhan.R
 import kotlinx.android.synthetic.main.activity_pinyin.*
 
 class PinyinActivity : AppCompatActivity() {

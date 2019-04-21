@@ -1,4 +1,4 @@
-package com.example.richard.oichina
+package com.puhan
 
 import androidx.recyclerview.widget.RecyclerView
 import androidx.test.espresso.Espresso.onView
@@ -8,7 +8,7 @@ import androidx.test.espresso.contrib.RecyclerViewActions
 import androidx.test.espresso.intent.rule.IntentsTestRule
 import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
 import androidx.test.espresso.matcher.ViewMatchers.withId
-import com.example.richard.oichina.activity.LessonsActivity
+import com.puhan.activity.LessonsActivity
 
 object LessonsActivityRobotConstants {
 }

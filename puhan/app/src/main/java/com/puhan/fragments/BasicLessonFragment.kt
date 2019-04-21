@@ -1,4 +1,4 @@
-package com.example.richard.oichina.fragments
+package com.puhan.fragments
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,10 +8,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.richard.oichina.R
-import com.example.richard.oichina.activity.PinyinActivity
-import com.example.richard.oichina.adapter.LessonAdapter
-import com.example.richard.oichina.model.LessonModel
+import com.puhan.R
+import com.puhan.activity.PinyinActivity
+import com.puhan.adapter.LessonAdapter
+import com.puhan.model.LessonModel
 import kotlinx.android.synthetic.main.fragment_basic_lesson.*
 
 /**

@@ -1,12 +1,12 @@
-package com.example.richard.oichina.adapter
+package com.puhan.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.richard.oichina.R
-import com.example.richard.oichina.model.LessonModel
+import com.puhan.R
+import com.puhan.model.LessonModel
 import kotlinx.android.synthetic.main.item_lesson.view.*
 
 class LessonAdapter(private val lessonList: ArrayList<LessonModel>,
