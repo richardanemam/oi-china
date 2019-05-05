@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.puhan.R
+import com.puhan.model.ItemClickListener
 import com.puhan.model.LessonModel
 import kotlinx.android.synthetic.main.item_lesson.view.*
 
@@ -13,9 +14,6 @@ class LessonAdapter(private val lessonList: ArrayList<LessonModel>,
                     private val listener: ItemClickListener) :
         RecyclerView.Adapter<LessonAdapter.LessonViewHolder>() {
 
-    interface ItemClickListener {
-        fun onItemClick(item: View, position: Int)
-    }
 
     override fun onBindViewHolder(holder: LessonViewHolder, position: Int) {
         holder.lessonTitle.text = lessonList[position].getTitle()
