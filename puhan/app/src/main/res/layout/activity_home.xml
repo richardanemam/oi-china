@@ -2,85 +2,75 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/dashboard"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary">
+    android:fillViewport="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="0dp">
 
-        <TextView
-            android:id="@+id/tv_puhan"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:id="@+id/ll_home_header"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="64dp"
-            android:layout_marginEnd="32dp"
-            android:gravity="center"
-            android:importantForAccessibility="no"
-            android:text="@string/app_name"
-            android:textColor="@color/black_000000"
-            android:textSize="@dimen/app_name_size"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/tv_slogan"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:gravity="center"
-            android:importantForAccessibility="no"
-            android:text="@string/slogan"
-            android:textColor="@color/black_000000"
-            android:textSize="@dimen/slogan_size"
-            app:layout_constraintEnd_toEndOf="@id/tv_puhan"
-            app:layout_constraintStart_toStartOf="@id/tv_puhan"
-            app:layout_constraintTop_toBottomOf="@id/tv_puhan" />
+            <TextView
+                android:id="@+id/tv_home_titulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="@color/white_f7f7f7"
+                android:textSize="32sp" />
 
-        <Button
-            android:id="@+id/btn_licoes"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="64dp"
-            android:background="@drawable/button_background"
-            android:drawableStart="@drawable/ic_book_shelf"
-            android:padding="24dp"
-            android:text="@string/licoes"
-            android:textColor="@color/grey_808080"
-            app:layout_constraintEnd_toEndOf="@id/tv_puhan"
-            app:layout_constraintStart_toStartOf="@id/tv_puhan"
-            app:layout_constraintTop_toBottomOf="@id/tv_slogan" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/slogan"
+                android:textColor="@color/white_f7f7f7"
+                android:textSize="16sp" />
+        </LinearLayout>
 
-        <Button
-            android:id="@+id/btn_expressoes"
-            android:layout_width="0dp"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_home_explore_itens"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="32dp"
-            android:background="@drawable/button_background"
-            android:drawableStart="@drawable/ic_great_wall"
-            android:padding="24dp"
-            android:text="@string/expressoes"
-            android:textColor="@color/grey_808080"
-            app:layout_constraintEnd_toEndOf="@id/tv_puhan"
-            app:layout_constraintStart_toStartOf="@id/tv_puhan"
-            app:layout_constraintTop_toBottomOf="@id/btn_licoes" />
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_home_header"
+            tools:itemCount="4"
+            tools:layoutManager="GridLayoutManager"
+            tools:listitem="@layout/item_home_explore"
+            tools:marginitem="20dp"
+            tools:orientation="horizontal"
+            tools:spanCount="2" />
 
         <Button
             android:id="@+id/btn_sobre_o_app"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="64dp"
-            android:layout_marginBottom="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="16dp"
             android:background="@null"
             android:text="@string/sobre"
             android:textAllCaps="false"
-            android:textColor="@color/blue_67AECA"
+            android:textColor="@color/colorAccent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btn_expressoes" />
+            app:layout_constraintTop_toBottomOf="@+id/rv_home_explore_itens" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
