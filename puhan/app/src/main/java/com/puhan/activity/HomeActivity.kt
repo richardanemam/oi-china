@@ -2,31 +2,49 @@ package com.puhan.activity
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.puhan.R
-import kotlinx.android.synthetic.main.activity_home.*
+import com.puhan.adapter.HomeAdapter
+import com.puhan.model.HomeExploreItensModel
+import com.puhan.model.ItemClickListener
 
-class HomeActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity(), ItemClickListener {
 
-    private lateinit var btnLicoes: Button
+    private lateinit var recyclerView: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
-
-        setUpVariables()
-        setUpClickHandle()
+        initializeViews()
     }
 
-    private fun setUpVariables() {
-        btnLicoes = btn_licoes
+    private fun initializeViews() {
+        recyclerView = findViewById(R.id.rv_home_explore_itens)
+        initializeRecyclerView()
     }
 
-    private fun setUpClickHandle() {
-        btnLicoes.setOnClickListener {
-            val intent = Intent(this@HomeActivity, LessonsActivity::class.java)
-            startActivity(intent)
+    private fun initializeRecyclerView() {
+
+        val homeItensList = arrayListOf<HomeExploreItensModel>()
+        homeItensList.add(HomeExploreItensModel(R.drawable.ic_books, "Lições"))
+        homeItensList.add(HomeExploreItensModel(R.drawable.ic_china, "Expressões"))
+
+        val layoutManager: RecyclerView.LayoutManager = GridLayoutManager(this.baseContext, 2)
+        recyclerView.layoutManager = layoutManager
+        recyclerView.adapter = HomeAdapter(homeItensList, this)
+        recyclerView.setHasFixedSize(false)
+    }
+
+    override fun onItemClick(item: View, position: Int) {
+        when (position) {
+            0 -> {
+                val intent = Intent(this, LessonsActivity::class.java)
+                startActivity(intent)
+            }
         }
     }
+
 }

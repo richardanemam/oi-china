@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.puhan.R
 import com.puhan.activity.PinyinActivity
 import com.puhan.adapter.LessonAdapter
+import com.puhan.model.ItemClickListener
 import com.puhan.model.LessonModel
 import kotlinx.android.synthetic.main.fragment_basic_lesson.*
 
@@ -18,7 +19,7 @@ import kotlinx.android.synthetic.main.fragment_basic_lesson.*
  * Created by Richard on 9/23/2018.
  */
 
-class BasicLessonFragment : Fragment(), LessonAdapter.ItemClickListener {
+class BasicLessonFragment : Fragment(), ItemClickListener {
 
     fun newInstance(infoBasicLessonList: ArrayList<LessonModel>): BasicLessonFragment {
         val basicLessonFragment = BasicLessonFragment()

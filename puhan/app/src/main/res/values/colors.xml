@@ -3,8 +3,8 @@
 
     <!--Standard Colors-->
     <color name="colorPrimary">#FFFFFF</color>
-    <color name="colorPrimaryDark">#808080</color>
-    <color name="colorAccent">#67AECA</color>
+    <color name="colorPrimaryDark">#0E81D1</color>
+    <color name="colorAccent">#60b0ff</color>
 
     <!--BLUE-->
     <color name="blue_67AECA">#67AECA</color>
@@ -21,6 +21,6 @@
     <color name="grey_6a6a6a">#6a6a6a</color>
 
     <!--WHITE-->
-    <color name="white_bg">#f7f7f7</color>
+    <color name="white_f7f7f7">#f7f7f7</color>
 
 </resources>
