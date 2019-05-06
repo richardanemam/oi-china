@@ -11,8 +11,8 @@ import com.puhan.model.HomeExploreItensModel
 import com.puhan.model.ItemClickListener
 
 
-class HomeAdapter(val homeItens: List<HomeExploreItensModel>,
-                  val listener: ItemClickListener) : RecyclerView.Adapter<HomeAdapter.HomeItemHolder>() {
+class HomeAdapter(private val homeItens: List<HomeExploreItensModel>,
+                  private val listener: ItemClickListener) : RecyclerView.Adapter<HomeAdapter.HomeItemHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeItemHolder {
         val itemView: View = LayoutInflater.from(parent.context).inflate(R.layout.item_home_explore,

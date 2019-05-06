@@ -1,17 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:theme="@style/SplashScreenTheme">
+    android:gravity="center"
+    android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/iv_logo"
+    <TextView
+        android:id="@+id/tv_splashscreen_appname"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:importantForAccessibility="no"
-        app:srcCompat="@drawable/puhan_logo" />
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/madeinchina"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="56sp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/tv_splashscreen_appslogan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/madeinchina"
+        android:gravity="center"
+        android:text="@string/slogan"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="24sp" />
+
+</LinearLayout>

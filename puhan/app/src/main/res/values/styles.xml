@@ -6,12 +6,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="colorControlNormal">@color/blue_67AECA</item>
-    </style>
-
-    <!--Style for Splash Screen-->
-    <style name="SplashScreenTheme" parent="AppTheme">
-        <item name="android:windowBackground">@drawable/splash_screen_background</item>
+        <item name="colorControlNormal">@color/colorAccent</item>
     </style>
 
 </resources>

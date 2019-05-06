@@ -15,7 +15,6 @@ import com.puhan.R
 
 class SplashScreenActivity : AppCompatActivity() {
 
-
     private val USER_KEY = "user"
     private val USER_PREFERENCES = "preferences"
     private lateinit var preferences: SharedPreferences
@@ -48,7 +47,7 @@ class SplashScreenActivity : AppCompatActivity() {
     }
 
     private fun showSplashScreen() {
-        val secondsDelayed = 3
+        val secondsDelayed = 5
         Handler().postDelayed({
             startActivity(Intent(this@SplashScreenActivity, HomeActivity::class.java))
             finish()

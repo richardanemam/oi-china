@@ -1,68 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/dashboard"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true">
+    android:background="@drawable/home_bg"
+    android:fillViewport="true"
+    android:scrollbars="none">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="0dp">
 
-        <LinearLayout
-            android:id="@+id/ll_home_header"
+
+        <TextView
+            android:id="@+id/tv_home_titulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:orientation="vertical"
+            android:fontFamily="@font/madeinchina"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/white_f7f7f7"
+            android:textSize="32sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/tv_home_titulo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/app_name"
-                android:textColor="@color/white_f7f7f7"
-                android:textSize="32sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/slogan"
-                android:textColor="@color/white_f7f7f7"
-                android:textSize="16sp" />
-        </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_home_explore_itens"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
+            android:importantForAccessibility="no"
+            android:nestedScrollingEnabled="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ll_home_header"
-            tools:itemCount="4"
+            app:layout_constraintTop_toBottomOf="@+id/tv_home_titulo"
+            tools:itemCount="6"
             tools:layoutManager="GridLayoutManager"
             tools:listitem="@layout/item_home_explore"
-            tools:marginitem="20dp"
-            tools:orientation="horizontal"
+            tools:orientation="vertical"
             tools:spanCount="2" />
 
         <Button
             android:id="@+id/btn_sobre_o_app"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
             android:background="@null"
             android:text="@string/sobre"
             android:textAllCaps="false"
@@ -73,4 +65,4 @@
             app:layout_constraintTop_toBottomOf="@+id/rv_home_explore_itens" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+</androidx.core.widget.NestedScrollView>
