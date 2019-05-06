@@ -29,12 +29,8 @@ class HomeActivity : AppCompatActivity(), ItemClickListener {
     private fun initializeRecyclerView() {
 
         val homeItensList = arrayListOf<HomeExploreItensModel>()
-        homeItensList.add(HomeExploreItensModel(R.drawable.chat, "Chat"))
-        homeItensList.add(HomeExploreItensModel(R.drawable.contact, "Contact"))
-        homeItensList.add(HomeExploreItensModel(R.drawable.chat, "Chat"))
-        homeItensList.add(HomeExploreItensModel(R.drawable.contact, "Contact"))
-        homeItensList.add(HomeExploreItensModel(R.drawable.chat, "Chat"))
-        homeItensList.add(HomeExploreItensModel(R.drawable.contact, "Contact"))
+        homeItensList.add(HomeExploreItensModel(R.drawable.ic_books, "Lições"))
+        homeItensList.add(HomeExploreItensModel(R.drawable.ic_china, "Expressões"))
 
         val layoutManager: RecyclerView.LayoutManager = GridLayoutManager(this.baseContext, 2)
         recyclerView.layoutManager = layoutManager
