@@ -4,10 +4,11 @@
     <string name="app_name">PUHAN 葡汉</string>
     <string name="slogan">APRENDA MANDARIM</string>
 
-    <!--Main Activity-->
-    <string name="licoes">Lições</string>
-    <string name="expressoes">Expressões</string>
-    <string name="sobre">sobre o app</string>
+    <!--Home Activity-->
+    <string name="home_licoes">Lições</string>
+    <string name="home_expressoes">Expressões</string>
+    <string name="home_flashcards">Flashcards</string>
+    <string name="home_sobre">sobre o app</string>
 
     <!--Lessons Activity-->
     <string name="basic_lesson">básico</string>

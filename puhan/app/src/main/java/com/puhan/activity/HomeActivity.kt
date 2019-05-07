@@ -29,13 +29,13 @@ class HomeActivity : AppCompatActivity(), ItemClickListener {
     private fun initializeRecyclerView() {
 
         val homeItensList = arrayListOf<HomeExploreItensModel>()
-        homeItensList.add(HomeExploreItensModel(R.drawable.ic_books, "Lições"))
-        homeItensList.add(HomeExploreItensModel(R.drawable.ic_china, "Expressões"))
+        homeItensList.add(HomeExploreItensModel(R.drawable.ic_books, getString(R.string.home_licoes)))
+        homeItensList.add(HomeExploreItensModel(R.drawable.ic_china, getString(R.string.home_expressoes)))
+        homeItensList.add(HomeExploreItensModel(R.drawable.ic_flashcards, getString(R.string.home_flashcards)))
 
         val layoutManager: RecyclerView.LayoutManager = GridLayoutManager(this.baseContext, 2)
         recyclerView.layoutManager = layoutManager
         recyclerView.adapter = HomeAdapter(homeItensList, this)
-        recyclerView.setHasFixedSize(false)
     }
 
     override fun onItemClick(item: View, position: Int) {
