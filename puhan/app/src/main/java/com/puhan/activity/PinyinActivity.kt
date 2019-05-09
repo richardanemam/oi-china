@@ -11,11 +11,11 @@ class PinyinActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pinyin)
 
-        setUpToolbar()
+        buildToolbar()
     }
 
-    private fun setUpToolbar() {
-        val toolbar = toolbar_pinyin
+    private fun buildToolbar() {
+        val toolbar = toolbar
         setSupportActionBar(toolbar)
         val actionBar = supportActionBar
         actionBar?.setDisplayHomeAsUpEnabled(true)

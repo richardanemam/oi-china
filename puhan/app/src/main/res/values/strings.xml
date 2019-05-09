@@ -42,4 +42,28 @@
         pronunciado rapidamente. Este tom não possui qualquer acentuação.</string>
     <string name="pinyin_chart_content_description">Mapeamento dos tons do mandarim</string>
 
+    <!--First Lesson Activity-->
+    <string name="frase_simples">Frase Simples:\nsujeito + verbo + objeto</string>
+    <string name="descricao">Semelhante ao Português, em chinês, uma frase simples é constituida por</string>
+    <string name="descricao_adverbio">O advérbio em chinês sempre aparece antes do verbo</string>
+    <string name="frase_descricao">Sujeito + Verbo + Objeto</string>
+    <string name="frase_adverbio">Advérbio + Verbo</string>
+    <string name="frase_interrogativa">Frases interrogativas</string>
+    <string name="frase_interrogativ_descricao">As maneiras mais comuns de se fazer um pergunta em chinês são:</string>
+    <string name="forma_afirmativa">Forma afirmativa</string>
+    <string name="afirmativa_primeira_frase">我说汉语</string>
+    <string name="afirmativa_primeira_frase_pinyn">wŏ shuō Hànyŭ</string>
+    <string name="forma_negativa">Forma negativa</string>
+    <string name="negativa_primeira_frase">我不说汉语</string>
+    <string name="negativa_primeira_frase_pinyn">wŏ bù shuō Hànyŭ</string>
+    <string name="exemplo">Exemplos:</string>
+    <string name="adverbio_primeira_frase">你是巴西人</string>
+    <string name="adverbio_primeira_frase_pinyn">nĭ shì Bāxīrén</string>
+    <string name="adverbio_negativa_primeira_frase">他<b>不</b>是巴西人</string>
+    <string name="adverbio_primeira_frase_negativa_pinyn">wŏ <b>bù</b> shì Bāxīrén</string>
+    <string name="interrogativa_primeira_frase_1">你是巴西人吗?</string>
+    <string name="interrogativa_primeira_frase_1_pinyn">nĭ shì Bāxīrén ma?</string>
+    <string name="interrogativa_primeira_frase_2_frase">你是不是巴西人?</string>
+    <string name="interrogativa_primeira_frase_2_pinyn">nĭ shì bù shì Bāxīrén?</string>
+
 </resources>

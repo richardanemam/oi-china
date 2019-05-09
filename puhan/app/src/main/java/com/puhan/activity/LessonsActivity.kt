@@ -62,7 +62,7 @@ class LessonsActivity : AppCompatActivity(), ErrorDialogFragment.ErrorDialogList
     }
 
     private fun readLessonsData() {
-        LessonsDao().readDataFromFirestore(this::addListToView)
+        LessonsDao().readLessonsDataFromFirestore(this::addListToView)
     }
 
     private fun showErrorDialog() {

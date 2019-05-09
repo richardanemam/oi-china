@@ -9,7 +9,7 @@ class LessonsDao(val db: FirebaseFirestore = FirebaseFirestore.getInstance()) {
     private val TAG2 = "DEBBUG MESSAGE"
     private val listOfLessons = arrayListOf<LessonModel>()
 
-    fun readDataFromFirestore(onResult: (ArrayList<LessonModel>) -> Unit) {
+    fun readLessonsDataFromFirestore(onResult: (ArrayList<LessonModel>) -> Unit) {
         db.collection("lessons")
                 .get()
                 .addOnCompleteListener { task ->

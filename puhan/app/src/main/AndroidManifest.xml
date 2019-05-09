@@ -36,5 +36,16 @@
             android:name="com.puhan.activity.PinyinActivity"
             android:parentActivityName="com.puhan.activity.LessonsActivity"
             android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.puhan.activity.WhatsYourNameActivity"
+            android:parentActivityName="com.puhan.activity.LessonsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.puhan.activity.FlashcardActivity"
+            android:parentActivityName="com.puhan.activity.LessonsActivity"
+            android:screenOrientation="portrait" />
+
     </application>
 </manifest>

@@ -45,6 +45,8 @@ dependencies {
 
     //Firebase firestore
     implementation 'com.google.firebase:firebase-firestore:18.2.0'
+
+    implementation 'com.google.code.gson:gson:2.8.5'
 }
 repositories {
     mavenCentral()

@@ -44,6 +44,10 @@ class HomeActivity : AppCompatActivity(), ItemClickListener {
                 val intent = Intent(this, LessonsActivity::class.java)
                 startActivity(intent)
             }
+            2 -> {
+                val intent = Intent(this, FlashcardActivity::class.java)
+                startActivity(intent)
+            }
         }
     }
 

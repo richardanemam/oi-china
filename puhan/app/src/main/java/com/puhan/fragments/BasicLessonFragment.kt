@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.puhan.R
 import com.puhan.activity.PinyinActivity
+import com.puhan.activity.WhatsYourNameActivity
 import com.puhan.adapter.LessonAdapter
 import com.puhan.model.ItemClickListener
 import com.puhan.model.LessonModel
@@ -57,6 +58,10 @@ class BasicLessonFragment : Fragment(), ItemClickListener {
         when (position) {
             0 -> {
                 val intent = Intent(context, PinyinActivity::class.java)
+                startActivity(intent)
+            }
+            1 -> {
+                val intent = Intent(context, WhatsYourNameActivity::class.java)
                 startActivity(intent)
             }
         }

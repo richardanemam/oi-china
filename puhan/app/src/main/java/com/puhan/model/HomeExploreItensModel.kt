@@ -7,6 +7,6 @@ class HomeExploreItensModel(private val imgSrc: Int, private val title: String) 
     }
 
     fun getTitle(): String {
-        return title;
+        return title
     }
 }
